@@ -1,0 +1,83 @@
+﻿@model ResultManagementSystem.Models.Teacher
+
+@{
+    ViewData["Title"] = "Teacher";
+}
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Teacher";
+    ViewData["MessageT"] = "Teacher";
+    ViewData["Message2"] = "Teacher Information";
+}
+
+<!-- CSS -->
+<style>
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+    }
+
+    li {
+        float: left;
+    }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+</style>
+
+<!-- Teacher info -->
+<div class="container">
+
+    @*<center>*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+
+    </dl>
+    @*<center>*@
+
+</div>
+
+<!-- Teacher menu -->
+<div class="container">
+    <ul>
+        <li><a asp-area="" asp-controller="Teacher" asp-action="ViewClassInformation">View Class Information</a></li>
+        <li><a asp-area="" asp-controller="Teacher" asp-action="AddMarks">Add Marks</a></li>
+        <li><a asp-area="" asp-controller="Teacher" asp-action="ViewMarks">View Marks</a></li>
+    </ul>
+</div>

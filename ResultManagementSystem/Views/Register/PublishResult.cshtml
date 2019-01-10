@@ -1,0 +1,71 @@
+﻿<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Register";
+    ViewData["MessageR"] = "Register";
+    ViewData["Message2"] = "Publish Result";
+}
+
+@{
+    ViewData["Title"] = "Publish Result";
+}
+
+<!-- search -->
+<div class="container">
+    <form asp-action="PublishResult" method="POST">
+        <center>
+            <label class="col-sm-6">Exam Type :</label>
+            <select name="exam_type" class="col-sm-6">
+                <option value="first">First Term</option>
+                <option value="mid">Mid Term</option>
+                <option value="Final">Final Term</option>
+            </select>
+            <br><br>
+            <label class="col-sm-6">Class :</label>
+            <select name="class" class="col-sm-6">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br>
+            <input type="button" class="btn btn-default btn-sm" value="Search" />
+            @*<input type="Submit" name="Search" value="Search" /><br><br>*@
+        </center>
+    </form>
+</div>
+<!-- result list -->
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Roll</th>
+                    <th>Course1</th>
+                    <th>Course2</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <form asp-action="PublishResult" method="POST">
+        <center>
+            <input type="button" class="btn btn-default btn-sm" value="Publish" />
+        </center>
+    </form>
+</div>

@@ -1,0 +1,76 @@
+﻿@model ResultManagementSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Student Information";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Student";
+    ViewData["MessageS"] = "Student";
+    ViewData["Message2"] = "Student Information";
+}
+
+<!-- Student info -->
+<div class="container">
+
+    @*<center>*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roll)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Roll)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+
+    </dl>
+    @*<center>*@
+
+</div>
+<br><br><br><br>
+
+<!-- search result -->
+<form asp-controller="Student" asp-action="StudentResult" class="col-sm-12" method="post">
+    <center>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <label>Exam Type:</label>
+                <input type="text" name="Id" class="form-control">
+                <br><br><br>
+                <div class="col-md-offset-2 col-md-10">
+                    <input asp-action="StudentResult" type="submit" value="Result" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </center>
+</form>
+
+

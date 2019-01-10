@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Delete Actor Information ";
+}
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Admin";
+    ViewData["MessageA"] = "Admin";
+    ViewData["Message2"] = "Delete Actor Information";
+}
+<!-- Delete -->
+<form asp-controller="Admin" asp-action="SaveActorDelete" class="panel panel-body" method="post">
+    <div class="form-group">
+        <label class="col-sm-4">ActorId</label>
+        <div class="col-sm-8">
+            <input type="text" name="ActorId" class="form-control">
+        </div>
+        <br /><br /><br />
+        <div class="col-md-offset-2 col-md-10">
+            <input asp-action="SaveActorDelete" type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+

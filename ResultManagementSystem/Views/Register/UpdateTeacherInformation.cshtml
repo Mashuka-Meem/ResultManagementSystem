@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Update Teacher Information";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Register";
+    ViewData["MessageR"] = "Register";
+    ViewData["Message2"] = "Update Teacher Information";
+}
+
+<!-- Update Teacher Information -->
+<form asp-controller="Register" asp-action="UpdateTeacher" class="panel panel-body" method="post">
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Id</label>
+            <input type="text" name="Id" class="form-control">
+            <label>Name</label>
+            <input type="text" name="Name" class="form-control">
+            <label>Designation</label>
+            <input type="text" name="Designation" class="form-control">
+            <label>Contact</label>
+            <input type="text" name="Contact" class="form-control">
+            <br />
+            <div class="col-md-offset-2 col-md-10">
+                <input asp-action="UpdateTeacher" type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+

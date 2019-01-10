@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Add Student Information";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Register";
+    ViewData["MessageR"] = "Register";
+    ViewData["Message2"] = "Add Student Information";
+}
+
+<!-- add student -->
+<form asp-controller="Register" asp-action="SaveStudent" class="panel panel-body" method="post">
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Id</label>
+            <input type="text" name="Id" class="form-control">
+            <label>Name</label>
+            <input type="text" name="Name" class="form-control">
+            <label>Class</label>
+            <input type="text" name="Class" class="form-control">
+            <label>Roll</label>
+            <input type="text" name="Roll" class="form-control">
+            <label>Contact</label>
+            <input type="text" name="Contact" class="form-control">
+            <br />
+            <div class="col-md-offset-2 col-md-10">
+                <input asp-action="SaveStudent" type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+</form>
+
+

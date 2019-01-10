@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Add Actor";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Admin";
+    ViewData["MessageA"] = "Admin";
+    ViewData["Message2"] = "Add Actor";
+}
+
+<!-- Add Actor -->
+<form asp-controller="Admin" asp-action="SaveActor" class="panel panel-body" method="post">
+    <div class="form-group">
+        <label class="col-sm-4">Actortype</label>
+        <div class="col-sm-8">
+            <input type="text" name="ActorType" class="form-control">
+        </div>
+        <br /><br /><br />
+        <div class="col-md-offset-4 col-md-8">
+            <input asp-action="SaveActor" type="submit" value="Submit" class="btn btn-default" />
+        </div>
+        <div>
+        </div>
+    </div>
+</form>
+
+

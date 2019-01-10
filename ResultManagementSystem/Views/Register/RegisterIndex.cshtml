@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Register";
+    ViewData["MessageR"] = "Register";
+}
+
+<!-- CSS -->
+<style>
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+    }
+
+    li {
+        float: left;
+    }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+</style>
+
+<!-- Register menu -->
+<div class="container">
+    <ul>
+        <li><a asp-area="" asp-controller="Register" asp-action="AddStudentInformation">Add Student Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="AddTeacherInformation">Add Teacher Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="AddCourseInformation">Add Course Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="AddClassInformation">Add Class Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="ViewStudentInformation">View Student Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="ViewTeacherInformation">View Teacher Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="ViewCourseInformation">View Course Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="ViewClassInformation">View Class Information</a></li>
+        <li><a asp-area="" asp-controller="Register" asp-action="PublishResult">Publish Result</a></li>
+    </ul>
+</div>
+

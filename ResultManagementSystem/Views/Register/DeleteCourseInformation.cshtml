@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Delete Course Information";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Register";
+    ViewData["MessageR"] = "Register";
+    ViewData["Message2"] = "Delete Course Information";
+}
+
+<!-- delete course -->
+<form asp-controller="Register" asp-action="DeleteCourse" class="panel panel-body" method="post">
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Course Code</label>
+            <input type="text" name="CourseCode" class="form-control">
+            <label>Course Name</label>
+            <input type="text" name="CourseName" class="form-control">
+            <br />
+            <div class="col-md-offset-2 col-md-10">
+                <input asp-action="DeleteCourse" type="submit" value="Delete" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+</form>

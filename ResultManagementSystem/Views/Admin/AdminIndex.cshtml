@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Admin";
+    ViewData["MessageA"] = "Admin";
+}
+
+<!-- admin menu -->
+<div class="container">
+    <a asp-area="" asp-controller="Admin" asp-action="AddActor">Add Actor</a>
+    <a asp-area="" asp-controller="Admin" asp-action="AddLoginInformation">Add Login Information</a>
+    <a asp-area="" asp-controller="Admin" asp-action="ViewActorDetails">View Actor Details</a>
+    <a asp-area="" asp-controller="Admin" asp-action="ViewLoginDetails">View Login Details</a>
+</div>

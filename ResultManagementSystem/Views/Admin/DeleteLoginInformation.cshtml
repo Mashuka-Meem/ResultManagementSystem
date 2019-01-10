@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Delete Login Information ";
+}
+
+<!-- Navbar -->
+@{
+    ViewData["Message1"] = "Admin";
+    ViewData["MessageA"] = "Admin";
+    ViewData["Message2"] = "Delete Login Information";
+}
+
+<!-- Delete -->
+<form asp-controller="Admin" asp-action="SaveLoginDelete" class="panel panel-body" method="post">
+    <div class="form-group">
+        <label class="col-sm-4">Id</label>
+        <div class="col-sm-4">
+            <input type="text" name="Id" class="form-control">
+        </div>
+        @*<label>Password</label>
+            <input type="text" name="Password" class="form-control">
+            <label>ActorId</label>
+            <input type="text" name="ActorId" class="form-control">*@
+        <br /><br /><br />
+        <div class="col-md-offset-2 col-md-10">
+            <input asp-action="SaveLoginDelete" type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+</form>
